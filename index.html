@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="description" content="">
-        <meta name="author" content="TemplateMo">
+        <meta name="author" content="Hernawan">
 
         <title>Hernawan Portofolio</title>
 
@@ -26,6 +26,66 @@
 
         <link href="css/css-portfolio-style.css" rel="stylesheet">
         
+        <style>
+            @media (max-width: 768px) {
+              .container {
+                padding: 10px;
+                flex-direction: column;
+                align-items: center;
+              }
+        
+              .hero-text {
+                text-align: center;
+              }
+        
+              .hero-title {
+                font-size: 32px;
+              }
+        
+              .hero h2 {
+                font-size: 24px;
+              }
+        
+              .about-thumb {
+                padding: 10px;
+              }
+        
+              .profile-small-title {
+                min-width: 100px;
+                padding: 8px 16px;
+                margin-right: 5px;
+                display: block;
+              }
+        
+              .projects-thumb {
+                padding: 20px;
+              }
+        
+              .projects-image {
+                width: 100%;
+                height: auto;
+              }
+        
+              .contact-form input,
+              .contact-form textarea,
+              .contact-form button {
+                width: 100%;
+                box-sizing: border-box;
+              }
+        
+              .footer-menu-link {
+                min-width: auto;
+                width: 100%;
+              }
+        
+              .social-icon-link {
+                width: 36px;
+                height: 36px;
+                line-height: 36px;
+                font-size: 14px;
+              }
+            }
+          </style>
     </head>
     
     <body>
@@ -94,29 +154,21 @@
 
                         <div class="col-lg-7 col-12">
                             <div class="hero-text">
-                                <div class="hero-title-wrap d-flex align-items-center mb-4">
+                                <div class="hero-title-wrap d-flex align-items-center justify-content-center justify-content-lg-start mb-4">
                                     <img src="images/p4.jpg" class="avatar-image avatar-image-large img-fluid" alt="">
                                     <h1 class="hero-title ms-3 mb-0">Hallo!</h1>
-                                </div>
+                                  </div>
 
                                 <h2 class="mb-4">This is my personal portofolio.</h2>
                                 <p class="mb-4"><a class="custom-btn btn custom-link" href="#section_2">Get Started</a></p>
                             </div>
                         </div>
 
-                        <!--
-                        <div class="col-lg-5 col-12 position-relative">
-                            <div class="hero-image-wrap"></div>
-                            <img src="images/zipzop.gif" class="hero-image img-fluid" alt="">
-                        </div>
-                        -->
-
                     </div>
                 </div>
 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#535da1" fill-opacity="1" d="M0,160L24,160C48,160,96,160,144,138.7C192,117,240,75,288,64C336,53,384,75,432,106.7C480,139,528,181,576,208C624,235,672,245,720,240C768,235,816,213,864,186.7C912,160,960,128,1008,133.3C1056,139,1104,181,1152,202.7C1200,224,1248,224,1296,197.3C1344,171,1392,117,1416,90.7L1440,64L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path></svg>
             </section>
-
 
             <section class="about section-padding" id="section_2">
                 <div class="container">
@@ -146,7 +198,7 @@
                 </div>
             </section>
 
-            <section class="featured section-padding">
+            <section class="featured">
                 <div class="container">
                     <div class="row">
 
@@ -218,33 +270,17 @@
 
             <section class="clients section-padding">
                 <div class="container">
-                    <div class="row align-items-center">
-
-                        <div class="col-lg-12 col-12">
-                            <h3 class="text-center mb-5">Technical Skills</h3>
-                        </div>
-
-                        <div class="col-lg-3 col-4 ms-auto clients-item-height">
-                            <img src="images/clients/Kotlin_logo3.svg" class="clients-image img-fluid" alt="">
-                        </div>
-
-                        <div class="col-lg-3 col-4 clients-item-height">
-                            <img src="images/clients/Figma_logo2.svg" class="clients-image img-fluid" alt="">
-                        </div>
-
-                        <div class="col-lg-3 col-4 clients-item-height">
-                            <img src="images/clients/mysql-logo3.svg" class="clients-image img-fluid" alt="">
-                        </div>
-
-                        <div class="col-lg-3 col-4 clients-item-height">
-                            <img src="images/clients/Python_logo2.svg" class="clients-image img-fluid" alt="">
-                        </div>
-
-                    </div>
+                  <h3 class="text-center mb-5">Technical Skills</h3>
+              
+                  <div class="skills-grid">
+                    <img src="images/clients/Kotlin_logo3.svg" class="clients-image img-fluid" alt="">
+                    <img src="images/clients/Figma_logo2.svg" class="clients-image img-fluid" alt="">
+                    <img src="images/clients/mysql-logo3.svg" class="clients-image img-fluid" alt="">
+                    <img src="images/clients/Python_logo2.svg" class="clients-image img-fluid" alt="">
+                  </div>
                 </div>
-            </section>
-
-
+              </section>
+              
             <section class="services section-padding" id="section_3">
                 <div class="container">
                     <div class="row">
@@ -352,7 +388,7 @@
             </section>
 
 
-            <section class="projects section-padding" id="section_4">
+            <section class="projects" id="section_4">
                 <div class="container">
                     <div class="row">
 
@@ -587,6 +623,29 @@
                 </div>
             </div>
         </footer>
+
+        <script>
+            let prevScrollPos = window.pageYOffset;
+            const navbar = document.querySelector(".navbar");
+          
+            window.addEventListener("scroll", function () {
+              if (window.innerWidth <= 768) {
+                const currentScrollPos = window.pageYOffset;
+          
+                if (prevScrollPos > currentScrollPos) {
+                  // Scroll ke atas → tampilkan navbar
+                  navbar.classList.remove("navbar-hidden");
+                } else {
+                  // Scroll ke bawah → sembunyikan navbar
+                  navbar.classList.add("navbar-hidden");
+                }
+          
+                prevScrollPos = currentScrollPos;
+              } else {
+                navbar.classList.remove("navbar-hidden");
+              }
+            });
+          </script>
 
         <!-- JAVASCRIPT FILES -->
         <script src="js/jquery.min.js"></script>

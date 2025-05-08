@@ -150,6 +150,164 @@ strong {
   padding: 10px 30px;
 }
 
+.skills-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.clients-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 1040px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .clients-image {
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .container {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .navbar-toggler {
+    margin-left: 0;
+  }
+
+  .navbar-collapse {
+    text-align: left;
+    width: 100%;
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item {
+    text-align: left;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .about-thumb {
+    padding-right: 10px;
+    text-align: center;
+  }
+
+  .profile-small-title {
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .profile-body span {
+    font-size: 14px;
+    padding-right: 20px;
+  }
+
+  .profile-body span {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+
+  .projects-thumb {
+    padding: 20px;
+  }
+
+  .projects-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .services-thumb {
+    padding: 20px;
+  }
+
+  .services-icon-wrap {
+    width: 40%;
+    height: 50%;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .footer-menu-link {
+    display: block;
+    margin: 5px 0;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .social-icon-link {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .custom-btn,
+  .navbar .custom-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .section-padding {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+
+  .navbar-icon {
+    font-size: 12px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+  }
+}
 
 /*---------------------------------------
   AVATAR IMAGE               
@@ -166,6 +324,8 @@ strong {
 .avatar-image-large {
   width: 90.4px;
   height: 90.4px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 
@@ -477,9 +637,41 @@ strong {
   padding-bottom: 330px;
 }
 
+@media (min-width: 768px) {
+  .hero {
+    text-align: left;
+    padding: 4rem 2rem;
+  }
+
+  .hero-title-wrap {
+    justify-content: start;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero .hero-text h1,
+  .hero .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .avatar-image-large {
+    width: 48px;
+    height: 48px;
+  }
+
+}
+
 @media  screen and (min-width: 991px) {
   .hero {
-    height: 100vh;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    text-align: center;
   }
 }
 
@@ -501,39 +693,11 @@ strong {
 }
 
 .hero-text {
+  max-width: 100%;
   position: relative;
   z-index: 22;
   top: 70px;
 }
-
-/*.hero-image-wrap {
-  background: var(--white-color);
-  border-radius: 50%;
-  width: 350px;
-  height: 350px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 22;
-  top: -50px;
-  right: 0;
-  left: 0;
-  margin: auto;
-  pointer-events: none;
-}
-
-.hero-image {
-  position: absolute;
-  z-index: 22;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  position: absolute;
-}*/
 
 .hero svg {
   position: absolute;
@@ -559,7 +723,7 @@ strong {
 
 .profile-title {
   border-bottom: 1px solid var(--border-color);
-  padding: 15px 30px;
+  padding: 15px 13px;
 }
 
 .profile-small-title {
@@ -631,6 +795,8 @@ strong {
   max-height: 100px;
   margin: auto;
   transition: all ease 0.2s;
+  margin-bottom: 2em;
+  margin-top: 2em;
 }
 
 .clients-image:hover {
@@ -1045,8 +1211,8 @@ strong {
   }
 
   .section-padding {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .custom-btn,
@@ -1095,7 +1261,6 @@ strong {
 
   .hero {
     padding-top: 200px;
-    padding-bottom: 400px;
   }
 
   .hero-text {
@@ -1154,6 +1319,11 @@ strong {
     margin-right: 12px;
     margin-left: 12px;
   }
+
+  .navbar-hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1166,15 +1336,15 @@ strong {
   }
 
   h3 {
-    font-size: 26px;
+    font-size: 21px;
   }
 
   h4 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   h5 {
-    font-size: 20px;
+    font-size: 19px;
   }
 
   .custom-btn,
